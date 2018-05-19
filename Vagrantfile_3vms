@@ -8,8 +8,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "geerlingguy/centos7"
   config.ssh.insert_key = false
   config.vm.synced_folder ".", "/vagrant", disabled: true
-  # Need to do this?
-  #config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
   config.vm.provider :virtualbox do |v|
     v.memory = 256
     v.linked_clone = true
